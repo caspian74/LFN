@@ -3,10 +3,7 @@ import {
   Play,
   Menu,
   X,
-  Instagram,
   Music2,
-  Youtube,
-  Twitch,
   Globe,
   ChevronLeft,
   ChevronRight,
@@ -203,7 +200,7 @@ function PriceCard({ item, cta = "Apartar horario" }) {
    MAIN
 --------------------------------------------------------- */
 
-function LineaFronteraSite() {
+export default function LineaFronteraSite() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [talentIdx, setTalentIdx] = useState(0);
   const [email, setEmail] = useState("");
@@ -329,8 +326,8 @@ function LineaFronteraSite() {
                   <Play size={34} />
                 </div>
                 <div style={{ display: "flex", gap: "1rem", marginTop: "1rem", justifyContent: "center", color: COLORS.muted, fontSize: "0.8rem" }}>
-                  <span style={{ display: "flex", alignItems: "center", gap: 4 }}><Twitch size={14} /> Twitch</span>
-                  <span style={{ display: "flex", alignItems: "center", gap: 4 }}><Youtube size={14} /> YouTube</span>
+                  <span style={{ display: "flex", alignItems: "center", gap: 4 }}>Twitch</span>
+                  <span style={{ display: "flex", alignItems: "center", gap: 4 }}>YouTube</span>
                   <span style={{ display: "flex", alignItems: "center", gap: 4 }}><Globe size={14} /> Web</span>
                 </div>
               </div>
@@ -413,10 +410,10 @@ function LineaFronteraSite() {
             </p>
             <div style={{ display: "flex", gap: "1.8rem", marginTop: "1.8rem", flexWrap: "wrap" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8, color: COLORS.text, fontWeight: 700, fontSize: "0.95rem" }}>
-                <Twitch size={20} color={COLORS.dusk} /> Twitch
+                Twitch
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 8, color: COLORS.text, fontWeight: 700, fontSize: "0.95rem" }}>
-                <Youtube size={20} color={COLORS.dusk} /> YouTube
+                YouTube
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 8, color: COLORS.text, fontWeight: 700, fontSize: "0.95rem" }}>
                 <Globe size={20} color={COLORS.dusk} /> lineafrontera.stream
@@ -626,10 +623,10 @@ function LineaFronteraSite() {
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "2.5rem 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
           <div style={{ ...display, fontSize: "1.2rem" }}>LÍNEA FRONTERA NETWORK</div>
           <div style={{ display: "flex", gap: "1.2rem" }}>
-            <Instagram size={18} color={COLORS.muted} />
+            <span style={{ color: COLORS.muted, fontWeight: 700, fontSize: "0.75rem" }}>IG</span>
             <Music2 size={18} color={COLORS.muted} />
-            <Youtube size={18} color={COLORS.muted} />
-            <Twitch size={18} color={COLORS.muted} />
+            <span style={{ color: COLORS.muted, fontWeight: 700, fontSize: "0.75rem" }}>YT</span>
+            <span style={{ color: COLORS.muted, fontWeight: 700, fontSize: "0.75rem" }}>TW</span>
           </div>
           <div style={{ color: COLORS.muted, fontSize: "0.85rem" }}>Tijuana, Baja California</div>
         </div>
