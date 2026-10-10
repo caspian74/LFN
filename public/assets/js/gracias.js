@@ -1,0 +1,1 @@
+window.addEventListener('load',function(){LF.api.ready().then(function(){return LF.api.get('/content')}).then(function(r){if(r.data&&r.data.content)LF.ui.initAnalytics(r.data.content.seo);LF.ui.track('purchase',{currency:'MXN',transaction_id:new URLSearchParams(location.search).get('o')||''})})})

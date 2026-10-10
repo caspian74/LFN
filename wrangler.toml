@@ -1,0 +1,10 @@
+name = "linea-frontera"
+compatibility_date = "2026-01-01"
+pages_build_output_dir = "public"
+
+# Crea la base con:  npx wrangler d1 create linea-frontera-db
+# y pega aquí el database_id que te devuelve.
+[[d1_databases]]
+binding = "DB"
+database_name = "linea-frontera-db"
+database_id = "PEGA_AQUI_EL_ID"

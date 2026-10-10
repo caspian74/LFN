@@ -1,19 +1,15 @@
 {
-  "name": "linea-frontera-network",
+  "name": "linea-frontera",
   "private": true,
-  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "node scripts/bake.mjs",
+    "dev": "node scripts/dev-server.mjs 8788",
+    "test": "node scripts/test-api.mjs",
+    "db:init": "wrangler d1 execute linea-frontera-db --remote --file=migrations/0001_init.sql",
+    "db:init:local": "wrangler d1 execute linea-frontera-db --local --file=migrations/0001_init.sql",
+    "deploy": "npm run build && wrangler pages deploy public --project-name linea-frontera"
   },
-  "dependencies": {
-    "@vitejs/plugin-react": "latest",
-    "lucide-react": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "vite": "latest"
-  },
-  "devDependencies": {}
+  "engines": { "node": ">=22" },
+  "devDependencies": { "wrangler": "^4.0.0" }
 }
